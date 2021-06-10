@@ -1,0 +1,170 @@
+body {
+  min-height: 100vh;
+  background-color: #202020;
+}
+
+.container {
+  max-width: 500px;
+  margin: auto;
+  background-color: $container-background;
+  padding-bottom: 3rem;
+
+  header {
+    height: 70px;
+    background-color: $header-background;
+
+    .icon {
+      //   display: flex;
+      //   align-items: center;
+      img {
+        width: 40px;
+      }
+      i {
+        font-size: x-large;
+        margin: 0 10px;
+      }
+    }
+  }
+
+  ul.menu {
+    height: 40px;
+
+    li:first-child a {
+      color: $dark-gray;
+      font-weight: 600;
+    }
+
+    li:last-child a {
+      color: $medium-gray;
+    }
+  }
+
+  .search {
+    padding: 10px 20px;
+
+    .input-container {
+      background-color: #fff;
+      padding: 0 15px;
+      border-radius: 10px;
+      box-shadow: 1px 1px 3px $medium-gray;
+
+      i {
+        color: $dark-gray;
+        margin-right: 5px;
+      }
+
+      input {
+        border: none;
+        outline: none;
+        box-shadow: none;
+        height: 100%;
+        margin: 0;
+
+        &::placeholder {
+          color: $dark-gray;
+        }
+      }
+    }
+  }
+
+  .brands-container {
+    padding: 10px 0 20px 20px;
+
+    h2 {
+      color: $dark-gray;
+      font-weight: 600;
+    }
+
+    .swiper-container {
+      width: 100%;
+      height: 90px;
+    }
+
+    .swiper-slide {
+      width: 150px;
+      height: auto !important;
+      padding: 20px 10px;
+      text-align: center;
+      background-color: #fff;
+      border-radius: 15px;
+      margin-right: 10px !important;
+    }
+
+    .swiper-slide img {
+      height: 20px;
+      margin-bottom: 10px;
+    }
+
+    .swiper-slide p {
+      margin: 0;
+      padding: 0;
+      line-height: 1.2;
+      text-align: left;
+      font-size: 80%;
+    }
+  }
+
+  .categories {
+    padding: 10px 0 20px 20px;
+
+    h2 {
+      color: $dark-gray;
+      font-weight: 600;
+    }
+
+    .category {
+      height: 50px;
+      background-color: $white;
+      border-bottom: 0.3px solid $black;
+
+      div {
+        display: flex;
+        align-items: center;
+      }
+
+      img {
+        width: 30px;
+        height: 30px;
+      }
+
+      p {
+        margin-bottom: 0;
+        font-size: 1.1rem;
+        font-weight: 600;
+      }
+
+      i {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  .clubot {
+    img {
+      width: 100px;
+    }
+
+    p {
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+  }
+
+  .ask {
+    background-color: $white;
+    width: 90%;
+    margin: 10px auto;
+    padding: 20px 0;
+    box-shadow: 1px 1px 3px $medium-gray;
+    border-radius: 15px;
+    border-bottom: 2px solid green;
+
+    img {
+      width: 60px;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
