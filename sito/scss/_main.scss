@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+header {
+  display: none;
+}
+
 .jumbo {
   height: 60vh;
   background-color: $jumbo-background;
@@ -242,6 +246,7 @@
 
   .post {
     padding: 10px;
+    flex-wrap: wrap !important;
     margin: 10px 0;
     border: 0.5px solid $dark-gray;
 
@@ -431,5 +436,410 @@ footer {
 
   p {
     padding: 0 40px;
+  }
+}
+
+@media only screen and (max-width: 1080px) {
+  .jumbo {
+    height: 70vh;
+    background-color: $jumbo-background;
+    background-image: url(img/intro-visitatore.png);
+    background-size: 1200px;
+    background-position-x: right;
+    background-position-y: -100px;
+    background-repeat: no-repeat;
+    position: relative;
+
+    .text-area {
+      width: 100%;
+      background-color: $white;
+      left: 0;
+      bottom: 0;
+      transform: translateY(0);
+      border-radius: 15px;
+
+      .text {
+        padding: 30px 30px 0px 30px;
+
+        h1 {
+          color: $primary-color;
+          font-weight: 600;
+          line-height: 1.3;
+          margin-bottom: 1.3rem;
+        }
+
+        p:last-child {
+          margin-bottom: 1.3rem;
+        }
+      }
+      .cta {
+        background-color: $primary-color;
+        padding: 10px 30px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $white;
+      }
+
+      .cta:first-child {
+        border-radius: 0 0 0 15px;
+        border-right: 1px solid $white;
+      }
+
+      .cta:last-child {
+        border-radius: 0 0 15px 0;
+        border-left: 1px solid $white;
+      }
+
+      i {
+        display: none;
+      }
+    }
+  }
+
+  .brands {
+    position: relative;
+    margin-top: 50px;
+
+    h2 {
+      color: $primary-color;
+      text-align: center;
+      padding: 30px;
+      font-weight: 600;
+    }
+
+    .swiper-container {
+      width: 100%;
+      height: 120px;
+
+      .swiper-slide {
+        height: 80%;
+        text-align: center;
+        background: $white;
+        width: calc(100% / 3 - 10px) !important;
+        box-shadow: 1px 1px 3px $medium-gray;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        img {
+          height: 60px;
+          width: 90%;
+        }
+        p {
+          text-transform: uppercase;
+          font-weight: bold;
+          margin-top: 10px;
+          color: $dark-gray;
+        }
+      }
+    }
+
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+      display: none;
+    }
+
+    .swiper-button-prev::after {
+      top: 140%;
+      left: 240%;
+    }
+
+    .swiper-button-next::after {
+      top: 140%;
+      right: 240%;
+    }
+  }
+
+  .programma {
+    padding: 10px 0;
+    flex-wrap: wrap !important;
+
+    .box {
+      padding: 20px 10%;
+    }
+    img {
+      height: 300px;
+    }
+
+    .socio {
+      padding-left: 20px;
+      border-bottom: 10px solid $secondary-color;
+
+      h2 {
+        color: $secondary-color;
+        font-weight: bold;
+      }
+    }
+
+    .vantaggi {
+      padding-right: 20px;
+      background-color: #feece9;
+      border-bottom: 10px solid $primary-color;
+      h2 {
+        color: $primary-color;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .card-container {
+    margin: 90px auto;
+    background-color: $warning-color;
+    flex-wrap: wrap !important;
+
+    .column {
+      padding: 20px 0;
+      text-align: center;
+      position: relative;
+      flex-wrap: wrap !important;
+
+      h3 {
+        font-weight: bold;
+        color: $white;
+        text-align: center;
+      }
+      p {
+        font-weight: 600;
+        font-size: 120%;
+        padding-right: 0px;
+        text-align: center;
+
+        span {
+          color: $primary-color;
+        }
+      }
+      a {
+        background-color: $primary-color;
+        color: $white;
+        text-transform: uppercase;
+        font-weight: 600;
+        padding: 0 30px;
+        border-radius: 40px;
+      }
+    }
+
+    .column:first-child {
+      border-right: 0px solid $white;
+
+      img {
+        position: relative;
+        height: 250px;
+      }
+    }
+
+    .column:last-child {
+      border-left: 0px solid $white;
+
+      img {
+        position: relative;
+        margin-top: 20px;
+        height: 250px;
+      }
+    }
+  }
+
+  .blog {
+    position: relative;
+    padding-bottom: 5%;
+
+    h3 {
+      font-size: 2rem;
+    }
+
+    .swiper-container {
+      width: 100%;
+      padding: 10px;
+
+      .swiper-slide {
+        width: calc(100% / 2 - 30px) !important;
+
+        .blog-footer {
+          padding: 0;
+
+          h6 {
+            text-align: left;
+          }
+        }
+      }
+    }
+
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  header {
+    display: block;
+
+    .top-bar {
+      background-color: $secondary-color;
+      color: $white;
+      font-weight: 600;
+    }
+
+    .main-header {
+      padding: 15px;
+      display: flex;
+
+      .logo {
+        width: 70%;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .cart {
+        width: 30%;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+
+        i {
+          margin: 0 5px;
+
+          &:first-child {
+            font-size: 20px;
+          }
+
+          &:last-child {
+            background-color: $primary-color;
+            padding: 10px;
+            border-radius: 50%;
+            color: $white;
+          }
+        }
+      }
+    }
+
+    .bottom-header {
+      background-color: $primary-color;
+      padding: 10px 15px;
+      color: $white;
+
+      i {
+        font-size: 20px;
+      }
+    }
+  }
+  .curiosita {
+    padding: 10px 0;
+
+    h2 {
+      color: $primary-color;
+      font-weight: bold;
+    }
+
+    .post {
+      padding: 10px;
+      flex-wrap: wrap !important;
+      margin: 10px 0;
+      border: 0.5px solid $dark-gray;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .menu {
+        padding: 0 30px !important;
+
+        .menu-header {
+          border-bottom: 0.5px solid $dark-gray;
+          padding: 5px 0;
+
+          h5 {
+            text-transform: uppercase;
+            color: $primary-color;
+            font-weight: 600;
+          }
+
+          p {
+            margin-bottom: 0.5rem;
+          }
+        }
+
+        .menu-body {
+          padding-right: 20%;
+          margin: 20px 0;
+
+          h3 {
+            font-weight: 600;
+            text-transform: uppercase;
+          }
+
+          a {
+            color: $black;
+            text-transform: uppercase;
+            font-weight: 600;
+            padding: 10px 0;
+          }
+        }
+
+        .menu-discount {
+          background-color: $primary-color;
+          margin-top: 60px;
+          padding: 5px;
+          text-align: center;
+
+          .menu-img {
+            position: relative;
+            img {
+              position: relative;
+              width: 40px;
+              margin-left: -40px;
+            }
+          }
+
+          h2 {
+            color: $white;
+            margin: 0 !important;
+
+            &:first-child {
+              margin-top: 10px !important;
+            }
+
+            &:last-child {
+              font-weight: normal;
+            }
+          }
+
+          p {
+            padding: 0;
+            font-size: 80%;
+          }
+        }
+      }
+    }
+  }
+
+  .blog {
+    position: relative;
+    padding-bottom: 5%;
+
+    h3 {
+      font-size: 2rem;
+    }
+
+    .swiper-container {
+      width: 100%;
+      padding: 10px;
+
+      .swiper-slide {
+        width: calc(100% - 30px) !important;
+      }
+    }
+  }
+
+  footer {
+    p {
+      padding: 0 30px;
+    }
   }
 }
